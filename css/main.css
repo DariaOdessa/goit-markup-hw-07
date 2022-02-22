@@ -27,6 +27,12 @@
   visibility: hidden;
 }
 
+.subscribe__btn, .clients__link, .about__text, .features__icon, .modal-check__label span, .modal-check__label, .modal__btn, .modal__close-btn, .socials__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 p,
 h1,
 h2,
@@ -79,9 +85,9 @@ body {
 .logo {
   display: block;
   font-family: Raleway, sans-serif;
-  font-weight: 700;
   font-size: 26px;
-  line-height: calc(31 / 26);
+  font-weight: 700;
+  line-height: calc($lh / $fs);
   color: var(--accent-color);
 }
 
@@ -98,7 +104,7 @@ body {
   height: 50px;
   font-size: 16px;
   font-weight: 700;
-  line-height: 1.87;
+  line-height: calc($lh / $fs);
   letter-spacing: 0.06em;
   color: var(--second-text-color);
   background-color: var(--accent-color);
@@ -111,11 +117,11 @@ body {
   background-color: #188ce8;
 }
 
-.section-title {
+.section__title {
   margin-bottom: 50px;
-  font-weight: 700;
   font-size: 36px;
-  line-height: calc(42 / 36);
+  font-weight: 700;
+  line-height: calc($lh / $fs);
   text-align: center;
   color: var(--header-text-color);
 }
@@ -126,9 +132,6 @@ body {
 }
 
 .socials__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -178,9 +181,6 @@ body {
 
 .modal__close-btn {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   top: 8px;
   right: 8px;
   width: 30px;
@@ -203,9 +203,9 @@ body {
 
 .modal__title {
   margin-bottom: 30px;
-  font-weight: 700;
   font-size: 20px;
-  line-height: 1.17;
+  font-weight: 700;
+  line-height: calc($lh / $fs);
   text-align: center;
   color: var(--header-text-color);
 }
@@ -224,7 +224,7 @@ body {
   left: 42px;
   transform: translateY(-50%);
   font-size: 12px;
-  line-height: 1.16;
+  line-height: calc($lh / $fs);
   letter-spacing: 0.01em;
   color: var(--first-text-color);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -273,9 +273,6 @@ body {
 }
 
 .modal__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 10px;
   margin: 0 auto;
 }
@@ -319,17 +316,11 @@ body {
 }
 
 .modal-check__label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 30px;
   line-height: 1.71;
   color: var(--first-text-color);
 }
 .modal-check__label span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
@@ -359,7 +350,7 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
-.main-nav {
+.header-container {
   display: flex;
 }
 
@@ -386,6 +377,21 @@ body {
   letter-spacing: 0.02em;
   color: var(--header-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-list__link--current {
+  color: var(--accent-color);
+  position: relative;
+}
+.nav-list__link--current::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 
 .contacts {
@@ -422,12 +428,11 @@ body {
   color: var(--accent-color);
 }
 
-.current {
+.nav-list__link--current {
   color: var(--accent-color);
   position: relative;
 }
-
-.current::after {
+.nav-list__link--current::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -455,9 +460,9 @@ body {
 
 .hero__title {
   margin-bottom: 30px;
-  font-weight: 900;
   font-size: 44px;
-  line-height: 1.36;
+  font-weight: 900;
+  line-height: calc($lh / $fs);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--second-text-color);
@@ -481,9 +486,6 @@ body {
 }
 
 .features__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 270px;
   height: 120px;
   margin-bottom: 30px;
@@ -504,6 +506,10 @@ body {
   color: var(--first-text-color);
 }
 
+.section--no-padding-top {
+  padding-top: 0;
+}
+
 .about {
   display: flex;
 }
@@ -518,9 +524,6 @@ body {
 
 .about__text {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -532,7 +535,7 @@ body {
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.team-section {
+.section--background-gray {
   background-color: #f5f4fa;
 }
 
@@ -560,9 +563,9 @@ body {
 
 .team__title {
   margin-bottom: 10px;
-  font-weight: 500;
   font-size: 16px;
-  line-height: calc(19 / 16);
+  font-weight: 500;
+  line-height: calc($lh / $fs);
   text-align: center;
   color: var(--header-text-color);
 }
@@ -585,9 +588,6 @@ body {
 }
 
 .clients__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
   border: solid 1px;
@@ -688,27 +688,21 @@ body {
 }
 .subscribe__email-input::-moz-placeholder {
   font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 3%;
+  line-height: calc($lh / $fs);
+  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 .subscribe__email-input:-ms-input-placeholder {
   font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 3%;
+  line-height: calc($lh / $fs);
+  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 .subscribe__email-input::placeholder {
   font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 3%;
+  line-height: calc($lh / $fs);
+  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-}
-
-.subscribe__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .subscribe__icon {
@@ -729,9 +723,9 @@ body {
 .filter__btn {
   padding: 6px 22px;
   font-family: inherit;
-  font-weight: 500;
   font-size: 16px;
-  line-height: 1.62;
+  font-weight: 500;
+  line-height: calc($lh / $fs);
   text-align: center;
   color: var(--header-text-color);
   background-color: #f5f4fa;
@@ -763,9 +757,9 @@ body {
 
 .portfolio__title {
   margin-bottom: 4px;
-  font-weight: 700;
   font-size: 18px;
-  line-height: 2;
+  font-weight: 700;
+  line-height: calc($lh / $fs);
   letter-spacing: 0.06em;
   color: var(--header-text-color);
 }

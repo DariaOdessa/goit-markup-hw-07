@@ -32,7 +32,7 @@
 .modal__close-btn {
   position: absolute;
 
-  @include flex-centered;
+  @extend %flex-centered;
 
   top: 8px;
   right: 8px;
@@ -58,7 +58,7 @@
 
 .modal__title {
   margin-bottom: 30px;
-  @include font(20px, 700, 23.44px, none);
+  @include font(20px, 700, 23.44px, null);
   text-align: center;
   color: var(--header-text-color);
 }
@@ -77,15 +77,15 @@
   top: 50%;
   left: 42px;
   transform: translateY(-50%);
-  @include font(12px, none, 14, 06px, 0.01em);
+  @include font(12px, null, 14px, 0.01em);
   color: var(--first-text-color);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal__input:focus + .modal__label,
-.modal__input:not(:placeholder-shown) + .modal__label {
-  transform: translateY(-36px) translateX(-40px);
-  color: var(--accent-color);
+  .modal__input:focus + &,
+  .modal__input:not(:placeholder-shown) + & {
+    transform: translateY(-36px) translateX(-40px);
+    color: var(--accent-color);
+  }
 }
 
 .modal__input {
@@ -111,7 +111,7 @@
 }
 
 .modal__btn {
-  @include flex-centered;
+  @extend %flex-centered;
   padding: 10px;
   margin: 0 auto;
 
@@ -132,10 +132,11 @@
 .comment__label {
   top: 18px;
   left: 16px;
-}
-.comment:focus + .comment__label,
-.comment:focus:not(:placeholder-shown) + .comment__label {
-  transform: translateY(-34px) translateX(-16px);
+
+  .comment:focus + &,
+  .comment:focus:not(:placeholder-shown) + & {
+    transform: translateY(-34px) translateX(-16px);
+  }
 }
 
 .modal__icon {
@@ -152,13 +153,13 @@
 }
 
 .modal-check__label {
-  @include flex-centered;
+  @extend %flex-centered;
   margin-bottom: 30px;
   line-height: 1.71;
   color: var(--first-text-color);
 
   span {
-    @include flex-centered;
+    @extend %flex-centered;
     width: 16px;
     height: 15px;
     border: 2px solid rgba(33, 33, 33, 1);

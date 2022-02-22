@@ -1,3 +1,7 @@
+.section--no-padding-top {
+  padding-top: 0;
+}
+
 .about {
   display: flex;
 }
@@ -12,7 +16,7 @@
 
 .about__text {
   position: absolute;
-  @include flex-centered;
+  @extend %flex-centered;
 
   bottom: 0;
   left: 0;

@@ -11,7 +11,7 @@
 .filter__btn {
   padding: 6px 22px;
   font-family: inherit;
-  @include font(16px, 500, 26px, none);
+  @include font(16px, 500, 26px, null);
   text-align: center;
   color: var(--header-text-color);
   background-color: #f5f4fa;

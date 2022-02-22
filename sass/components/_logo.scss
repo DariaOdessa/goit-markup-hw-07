@@ -1,7 +1,8 @@
 .logo {
   display: block;
   font-family: Raleway, sans-serif;
-  @include font(26px, 700, 31px, none);
+  @include font(26px, 700, 31px, null);
+  color: var(--accent-color);
 }
 
 .logo__dark {

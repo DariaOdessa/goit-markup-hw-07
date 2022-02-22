@@ -80,13 +80,13 @@
   color: var(--second-text-color);
 
   &::placeholder {
-    @include font(16px, none, 20px, 0.03em);
+    @include font(16px, null, 20px, 0.03em);
     color: rgba(255, 255, 255, 0.6);
   }
 }
 
 .subscribe__btn {
-  @include flex-centered;
+  @extend %flex-centered;
 }
 
 .subscribe__icon {

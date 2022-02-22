@@ -4,7 +4,7 @@
 }
 
 .socials__link {
-  @include flex-centered;
+  @extend %flex-centered;
 
   width: 44px;
   height: 44px;

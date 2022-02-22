@@ -1,4 +1,4 @@
-.team-section {
+.section--background-gray {
   background-color: #f5f4fa;
 }
 
@@ -27,7 +27,7 @@
 
 .team__title {
   margin-bottom: 10px;
-  @include font(16px, 500, 19px, none);
+  @include font(16px, 500, 19px, null);
   text-align: center;
   color: var(--header-text-color);
 }
